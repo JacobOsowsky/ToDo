@@ -17,7 +17,7 @@ const done = props.tasks.filter(task=>!task.active)
 
             <div className="done">
                 <h4>Zadania zrobione ({doneTasks.length})</h4>
-                {doneTasks.length > 2 && <span>Wyświetlono 2 ostanie zadania</span>}
+                {doneTasks.length > 2 && <span>Wyświetlono 2 ostatnie zadania</span>}
                 {doneTasks.slice(0,2)}
             </div>
         </>
