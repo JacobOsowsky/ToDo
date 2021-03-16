@@ -18,7 +18,7 @@ class App extends Component {
         id: 1,
         text: 'Pograć w LoLa',
         date: '2018-08-10',
-        important: true,
+        important: false,
         active: true,
         finishDate: null
       },

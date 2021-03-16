@@ -5,9 +5,29 @@ const TaskList = (props) => {
 const active = props.tasks.filter(task=>task.active);
 const done = props.tasks.filter(task=>!task.active)
     const activeTasks = active.map(task=>
-    <Task key={task.id} text={task.text} date={task.date} done={props.done} delete={props.delete} id={task.id}/>)
+    <Task 
+    key={task.id} 
+    text={task.text} 
+    date={task.date} 
+    done={props.done} 
+    delete={props.delete} 
+    id={task.id} 
+    important={task.important} 
+    active={task.active}
+    finish={task.finishDate}
+    />)
     const doneTasks = done.map(task=>
-        <Task key={task.id} text={task.text} date={task.date} done={props.done} delete={props.delete} id={task.id}/>)
+        <Task 
+        key={task.id} 
+        text={task.text} 
+        date={task.date} 
+        done={props.done} 
+        delete={props.delete} 
+        id={task.id} 
+        important={task.important} 
+        active={task.active}
+        finish={task.finishDate}
+        />)
     return ( 
         <>
             <div className="todo">
