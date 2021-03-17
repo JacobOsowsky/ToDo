@@ -19,11 +19,25 @@ changeCheckbox=(e)=>{
     })
     }
 
-
 changeDate=(e)=> {
 this.setState({
     date: e.target.value
 })
+}
+
+handleClick=()=> {
+    const {text,date,checked} = this.state;
+    if (text.length>2){
+    const add = this.props.add(text, date, checked)
+    if(add){
+this.setState({
+    text: '',
+    checked: false,
+    date: new Date().toISOString().slice(0,10)
+})}
+    }else return (
+        alert("za krótki tekst")
+    )
 }
 
     render() { 
@@ -37,7 +51,7 @@ this.setState({
                 <label htmlFor="checked">Priorytet</label> <br/>
                 <label htmlFor="date">Do kiedy</label>
                 <input type="date" id="date" value={this.state.date} min={minDate} max={maxDate} onChange={this.changeDate}></input> <br/>
-                <button>Dodaj</button>
+                <button onClick={this.handleClick}>Dodaj</button>
                 
             </div>
          );

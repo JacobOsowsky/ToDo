@@ -33,6 +33,22 @@ class App extends Component {
     ]
    }
 
+   addNewTask=(text,date,important)=>{
+     const newTask = {
+      id: this.state.tasks.length,
+      text,
+      date,
+      important,
+      active: true,
+      finishDate: null
+     }
+     this.setState({
+       tasks: [...this.state.tasks, newTask]
+     })
+
+     return true
+   }
+
 finishTask = (id)=> {
   const tasks = [...this.state.tasks];
   tasks.forEach(task=>{
@@ -70,7 +86,7 @@ deleteTask = (id) => {
     return (
       <div className="wrapper">
         <h1>TODO App</h1>
-        <AddTask/>
+        <AddTask add={this.addNewTask}/>
         <TaskList tasks={tasks} done={this.finishTask} delete={this.deleteTask}/>
       </div>
       );
