@@ -3,7 +3,15 @@ import Task from './Task'
 
 const TaskList = (props) => {
 const active = props.tasks.filter(task=>task.active);
-const done = props.tasks.filter(task=>!task.active)
+const done = props.tasks.filter(task=>!task.active);
+
+active.sort((a,b) => {
+    if(a.text>b.text) return 1;
+    if(a.text<b.text) return -1;
+    return 0
+})
+done.sort((a,b) => a.finishDate - b.finishDate)
+
     const activeTasks = active.map(task=>
     <Task 
     key={task.id} 

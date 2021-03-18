@@ -5,32 +5,7 @@ import TaskList from './TaskList'
 
 class App extends Component {
   state = { 
-    tasks: [
-      {
-        id: 0,
-        text: 'Umyć samochód',
-        date: '2018-03-13',
-        important: true,
-        active: true,
-        finishDate: null
-      },
-      {
-        id: 1,
-        text: 'Pograć w LoLa',
-        date: '2018-08-10',
-        important: false,
-        active: true,
-        finishDate: null
-      },
-      {
-        id: 2,
-        text: 'Zrobić obiad',
-        date: '2018-01-03',
-        important: true,
-        active: true,
-        finishDate: null
-      }
-    ]
+    tasks: []
    }
 
    addNewTask=(text,date,important)=>{
