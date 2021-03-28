@@ -46,12 +46,12 @@ this.setState({
         maxDate = maxDate + minDate.slice(4,10)
         return ( 
             <div className="add">
-                <input type="text" placeholder="wpisz zadanie" id="text" value={this.state.text} onChange={this.changeText}></input>
+                <input className="text" type="text" placeholder="Wpisz zadanie" id="text" value={this.state.text} onChange={this.changeText}></input>
                 <input type="checkbox" id="checked" checked={this.state.checked} onChange={this.changeCheckbox}></input>
                 <label htmlFor="checked">Priorytet</label> <br/>
                 <label htmlFor="date">Do kiedy</label>
                 <input type="date" id="date" value={this.state.date} min={minDate} max={maxDate} onChange={this.changeDate}></input> <br/>
-                <button onClick={this.handleClick}>Dodaj</button>
+                <button className="addTask" onClick={this.handleClick}>Dodaj</button>
                 
             </div>
          );

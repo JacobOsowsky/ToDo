@@ -10,7 +10,7 @@ active.sort((a,b) => {
     if(a.text<b.text) return -1;
     return 0
 })
-done.sort((a,b) => a.finishDate - b.finishDate)
+done.sort((a,b) => b.finishDate - a.finishDate)
 
     const activeTasks = active.map(task=>
     <Task 
@@ -45,8 +45,8 @@ done.sort((a,b) => a.finishDate - b.finishDate)
 
             <div className="done">
                 <h4>Zadania zrobione ({doneTasks.length})</h4>
-                {doneTasks.length > 2 && <span>Wyświetlono 2 ostatnie zadania</span>}
-                {doneTasks.slice(0,2)}
+                {doneTasks.length > 5 && <span>Wyświetlono 5 ostatnich zadań</span>}
+                {doneTasks.slice(0,5)}
             </div>
         </>
      );

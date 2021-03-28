@@ -2,7 +2,17 @@ input {
     margin: 10px;
 }
 
-button {
-    font-size: 16px;
-    padding: 5px 10px;
+input.text {
+    width: 20vw;
+    min-height: 5vh;
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+button.addTask {
+    color: #5CB3FF;
+    margin: 20px;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 20px;
 }
