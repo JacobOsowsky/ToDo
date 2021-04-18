@@ -16,3 +16,17 @@ button.addTask {
     padding: 10px 20px;
     border-radius: 20px;
 }
+
+@media (max-width: 640px) and (orientation: landscape) {
+    input.text {
+        width: 40vw;
+    }
+}
+
+@media (max-width: 768px) and (orientation: portrait) {
+    input.text {
+        width: 70vw;
+        display: block;
+        margin: 20px auto 20px auto;
+    }
+}
